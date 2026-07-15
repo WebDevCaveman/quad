@@ -1,0 +1,10 @@
+# design / source artifacts — not needed for the live site
+*.dc.html
+ASSET_MANIFEST.md
+COPY_SOURCE.md
+DESIGN-BRIEF.md
+assets/crests/_original/
+
+# tooling / OS
+.claude/
+.DS_Store

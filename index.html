@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUAD — four vibes. one city.</title>
+<meta name="description" content="Four dorms, four personalities, one city. Pick the one that gets you.">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body data-page="home" data-theme="dark">
+
+<!-- nav injected by quad.js -->
+
+<div class="home-hero">
+  <header class="home-hero__text">
+    <p class="eyebrow">Four vibes. One city. Zero boring.</p>
+    <h1 class="home-hero__title">your people <span class="home-hero__accent">live here</span></h1>
+    <p class="home-hero__lede">four dorms, four personalities, one city. pick the one that gets you.</p>
+    <div style="display:flex;margin-top:8px;">
+      <a href="vibe-check.html" class="btn btn--solid">take the vibe check</a>
+    </div>
+  </header>
+  <div class="home-hero__panels">
+    <a href="pulse.html" class="panel panel--pulse" aria-label="Pulse dorm">
+      <div class="panel__img"><img src="assets/images/home-hero-pulse.png" alt="Runners charging down a rooftop track at sunrise"></div>
+      <div class="panel__shade"></div><div class="panel__flood"></div>
+      <div class="panel__label"><img src="assets/crests/crest-pulse-mono.svg?v=4" alt="" style="transform:rotate(-4deg)"><span>Pulse</span></div>
+    </a>
+    <a href="social.html" class="panel panel--social" aria-label="Social dorm">
+      <div class="panel__img"><img src="assets/images/home-hero-social.png" alt="Friends mid-laugh at a rooftop party strung with lights"></div>
+      <div class="panel__shade"></div><div class="panel__flood"></div>
+      <div class="panel__label"><img src="assets/crests/crest-social-mono.svg?v=4" alt="" style="transform:rotate(3deg)"><span>Social</span></div>
+    </a>
+    <a href="focus.html" class="panel panel--focus" aria-label="Focus dorm">
+      <div class="panel__img"><img src="assets/images/home-hero-focus.png" alt="A student locked in at a glowing study booth after dark"></div>
+      <div class="panel__shade"></div><div class="panel__flood"></div>
+      <div class="panel__label"><img src="assets/crests/crest-focus-mono.svg?v=4" alt="" style="transform:rotate(-3deg)"><span>Focus</span></div>
+    </a>
+    <a href="nest.html" class="panel panel--nest" aria-label="Nest dorm">
+      <div class="panel__img"><img src="assets/images/home-hero-nest.png" alt="A sunlit lounge overflowing with plants and blankets"></div>
+      <div class="panel__shade"></div><div class="panel__flood"></div>
+      <div class="panel__label"><img src="assets/crests/crest-nest-mono.svg?v=4" alt="" style="transform:rotate(4deg)"><span>Nest</span></div>
+    </a>
+  </div>
+</div>
+
+<!-- divider: pulse zigzag -->
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path data-motion d="M0 60 L90 32 L180 88 L270 32 L360 88 L450 32 L540 88 L630 32 L720 88 L810 32 L900 88 L990 32 L1080 88 L1170 32 L1260 88 L1350 32 L1440 60" fill="none" stroke="#FF3D00" stroke-width="2.5"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-pulse-mono.svg?v=4" alt="">
+</div>
+
+<!-- vibe check teaser -->
+<section id="vibe-check" class="teaser">
+  <div class="teaser__intro">
+    <p class="eyebrow">vibe check</p>
+    <h2 class="teaser__h2">three questions. zero wrong answers. one home.</h2>
+    <div class="gauge" aria-hidden="true">
+      <img class="gauge__pulse"  src="assets/crests/crest-pulse-mono.svg?v=4"  alt="">
+      <img class="gauge__social" src="assets/crests/crest-social-mono.svg?v=4" alt="">
+      <img class="gauge__focus"  src="assets/crests/crest-focus-mono.svg?v=4"  alt="">
+      <img class="gauge__nest"   src="assets/crests/crest-nest-mono.svg?v=4"   alt="">
+      <div class="gauge__needle"></div>
+      <div class="gauge__hub"></div>
+    </div>
+  </div>
+  <div class="teaser__panel">
+    <div class="quiz-card" data-quiz-card>
+      <div class="quiz-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <h3 data-quiz-title></h3>
+      <div class="quiz-answers" data-quiz-answers></div>
+    </div>
+    <div class="quiz-result" data-quiz-result hidden>
+      <div class="quiz-result__glow" data-quiz-glow aria-hidden="true"></div>
+      <div class="quiz-result__card">
+        <p class="eyebrow">okay. we see you.</p>
+        <div class="quiz-result__crest shield" role="img" data-quiz-crest></div>
+        <h3>this is your place.</h3>
+        <a class="quiz-result__cta" data-quiz-link href="#">okay, tell me more</a>
+        <button class="quiz-result__restart" data-quiz-restart aria-label="start over">↺</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- divider: social confetti wave -->
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path data-motion d="M0 92 Q360 8 720 56 T1440 28" fill="none" stroke="#FF2E88" stroke-width="2.5"></path>
+    <circle cx="240" cy="44" r="4" fill="#7C4DFF"></circle><circle cx="520" cy="26" r="3" fill="#FF2E88"></circle><circle cx="820" cy="70" r="5" fill="#7C4DFF"></circle><circle cx="1080" cy="30" r="3" fill="#FF2E88"></circle><circle cx="1300" cy="52" r="4" fill="#7C4DFF"></circle>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-social-mono.svg?v=4" alt="">
+</div>
+
+<!-- meet the dorms -->
+<div id="dorms">
+  <h2 class="dorms__h2">meet the dorms</h2>
+
+  <section class="dormrow dormrow--pulse">
+    <div class="dormrow__media"><img src="assets/images/dorm-pulse-hero.png" alt="The Pulse dorm crew mid-run on the rooftop track"></div>
+    <div class="dormrow__body">
+      <span class="dormrow__crest shield shield--pulse" role="img" aria-label="Pulse"></span>
+      <h3>PULSE ⚡</h3>
+      <p>no rest days. <span class="hl-pulse">train, eat, repeat</span>, five minutes from your bed.</p>
+      <a href="pulse.html" class="dorm-cta dorm-cta--pulse">okay, tell me more</a>
+    </div>
+  </section>
+
+  <section class="dormrow dormrow--social dormrow--rev">
+    <div class="dormrow__media"><img src="assets/images/dorm-social-hero.png" alt="A Social dorm rooftop party in full swing"></div>
+    <div class="dormrow__body">
+      <span class="dormrow__crest shield shield--social" role="img" aria-label="Social"></span>
+      <h3>SOCIAL 🎉</h3>
+      <p>everyone's invited. you'll know the whole floor <span class="hl-social">by friday</span>.</p>
+      <a href="social.html" class="dorm-cta dorm-cta--social">okay, tell me more</a>
+    </div>
+  </section>
+
+  <section class="dormrow dormrow--focus">
+    <div class="dormrow__media"><img src="assets/images/dorm-focus-hero.png" alt="Focus dorm study lounge glowing at night"></div>
+    <div class="dormrow__body">
+      <span class="dormrow__crest shield shield--focus" role="img" aria-label="Focus"></span>
+      <h3>FOCUS 🎯</h3>
+      <p>lock in. deadlines fear this building. <span class="hl-focus">silence is a feature</span>.</p>
+      <a href="focus.html" class="dorm-cta dorm-cta--focus">okay, tell me more</a>
+    </div>
+  </section>
+
+  <section class="dormrow dormrow--nest dormrow--rev">
+    <div class="dormrow__media"><img src="assets/images/dorm-nest-hero.png" alt="The Nest dorm lounge, warm light and a wall of plants"></div>
+    <div class="dormrow__body">
+      <span class="dormrow__crest shield shield--nest" role="img" aria-label="Nest"></span>
+      <h3>NEST 🏠</h3>
+      <p>stay soft. plants, pancakes, and a couch that <span class="hl-nest">hugs back</span>.</p>
+      <a href="nest.html" class="dorm-cta dorm-cta--nest">okay, tell me more</a>
+    </div>
+  </section>
+</div>
+
+<!-- divider: focus steps -->
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 64 H180 V36 H420 V92 H700 V48 H980 V88 H1220 V56 H1440 V120 H0 Z" fill="#FAF7F2"></path>
+    <path data-motion d="M0 64 H180 V36 H420 V92 H700 V48 H980 V88 H1220 V56 H1440" fill="none" stroke="none"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-focus-mono.svg?v=4" alt="">
+</div>
+
+<!-- rooms digest -->
+<section class="rooms">
+  <h2 class="rooms__h2">same rooms. four flavors.</h2>
+  <p class="rooms__sub">every dorm runs the same three rooms — styled its own way.</p>
+  <div class="rooms__grid">
+    <div class="room-card">
+      <img src="assets/images/room-single-pulse.png" alt="A single room styled the Pulse way">
+      <div class="room-card__body"><h3>Single</h3>
+        <p class="room-card__price">€<span data-countup="540">540</span><small>/mo</small></p></div>
+    </div>
+    <div class="room-card">
+      <img src="assets/images/room-double-focus.png" alt="A double room styled the Focus way">
+      <div class="room-card__body"><h3>Double</h3>
+        <p class="room-card__price">€<span data-countup="420">420</span><small>/mo per person</small></p></div>
+    </div>
+    <div class="room-card">
+      <img src="assets/images/room-twin-social.png" alt="A twin room styled the Social way">
+      <div class="room-card__body"><h3>Twin</h3>
+        <p class="room-card__price">€<span data-countup="760">760</span><small>/mo per room</small></p></div>
+    </div>
+  </div>
+  <a href="room-single.html" class="btn btn--ink">show me my room</a>
+</section>
+
+<!-- divider: nest wave -->
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 0 H1440 V52 C1180 92 940 16 720 52 C500 88 260 16 0 52 Z" fill="#FAF7F2"></path>
+    <path data-motion d="M0 52 C260 16 500 88 720 52 C940 16 1180 92 1440 52" fill="none" stroke="none"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-nest-mono.svg?v=4" alt="">
+</div>
+
+<!-- group chat marquee -->
+<section class="marquee-sec">
+  <h2 class="marquee-sec__h2">straight from the group chat</h2>
+  <div class="marquee">
+    <div class="marquee__track" data-marquee>
+      <div class="quote quote--r1">
+        <img src="assets/images/dorm-pulse-people-01.png" alt="Mia from Pulse, grinning after a workout">
+        <div class="quote__body"><p class="quote__text">"moved in for the gym, stayed for the pancake sundays"</p>
+          <p class="quote__who"><img src="assets/crests/crest-pulse-mono.svg?v=4" alt="">— Mia, Pulse</p></div>
+      </div>
+      <div class="quote quote--r2">
+        <img src="assets/images/dorm-social-people-01.png" alt="Jonas from Social, mid-karaoke">
+        <div class="quote__body"><p class="quote__text">"my mom asked why I never call. it's the karaoke's fault"</p>
+          <p class="quote__who"><img src="assets/crests/crest-social-mono.svg?v=4" alt="">— Jonas, Social</p></div>
+      </div>
+      <div class="quote quote--r3">
+        <img src="assets/images/dorm-focus-people-01.png" alt="Priya from Focus, headphones on, thriving">
+        <div class="quote__body"><p class="quote__text">"GPA up, cortisol down. that's the tweet"</p>
+          <p class="quote__who"><img src="assets/crests/crest-focus-mono.svg?v=4" alt="">— Priya, Focus</p></div>
+      </div>
+      <div class="quote quote--r4">
+        <img src="assets/images/dorm-nest-people-01.png" alt="Alex from Nest with a few of the fourteen plants">
+        <div class="quote__body"><p class="quote__text">"I have 14 plants now. no regrets"</p>
+          <p class="quote__who"><img src="assets/crests/crest-nest-mono.svg?v=4" alt="">— Alex, Nest</p></div>
+      </div>
+      <!-- duplicate set for seamless loop -->
+      <div class="quote quote--r1" aria-hidden="true">
+        <img src="assets/images/dorm-pulse-people-01.png" alt="">
+        <div class="quote__body"><p class="quote__text">"moved in for the gym, stayed for the pancake sundays"</p>
+          <p class="quote__who"><img src="assets/crests/crest-pulse-mono.svg?v=4" alt="">— Mia, Pulse</p></div>
+      </div>
+      <div class="quote quote--r2" aria-hidden="true">
+        <img src="assets/images/dorm-social-people-01.png" alt="">
+        <div class="quote__body"><p class="quote__text">"my mom asked why I never call. it's the karaoke's fault"</p>
+          <p class="quote__who"><img src="assets/crests/crest-social-mono.svg?v=4" alt="">— Jonas, Social</p></div>
+      </div>
+      <div class="quote quote--r3" aria-hidden="true">
+        <img src="assets/images/dorm-focus-people-01.png" alt="">
+        <div class="quote__body"><p class="quote__text">"GPA up, cortisol down. that's the tweet"</p>
+          <p class="quote__who"><img src="assets/crests/crest-focus-mono.svg?v=4" alt="">— Priya, Focus</p></div>
+      </div>
+      <div class="quote quote--r4" aria-hidden="true">
+        <img src="assets/images/dorm-nest-people-01.png" alt="">
+        <div class="quote__body"><p class="quote__text">"I have 14 plants now. no regrets"</p>
+          <p class="quote__who"><img src="assets/crests/crest-nest-mono.svg?v=4" alt="">— Alex, Nest</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- divider: pulse zigzag -->
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path data-motion d="M0 60 L120 34 L240 86 L360 34 L480 86 L600 34 L720 86 L840 34 L960 86 L1080 34 L1200 86 L1320 34 L1440 60" fill="none" stroke="#FF3D00" stroke-width="2.5"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-pulse-mono.svg?v=4" alt="">
+</div>
+
+<!-- book CTA -->
+<section class="book-cta">
+  <h2>found your vibe?</h2>
+  <a href="book.html" class="btn btn--solid">book my spot</a>
+</section>
+
+<!-- footer injected by quad.js -->
+
+<script src="quad-nav.js?v=6"></script>
+<script src="quad.js?v=6"></script>
+<script>
+/* Home vibe-check teaser — 3-question mini quiz, weighted needle, winner links to dorm page. */
+(function () {
+  var DORMS = { Pulse:'#FF3D00', Social:'#FF2E88', Focus:'#3D5AFE', Nest:'#E2725B' };
+  var ANGLES = { Pulse:-54, Social:-18, Focus:18, Nest:54 };
+  var QUESTIONS = [
+    { t:"it's 7am. you are...", a:[
+      {t:'already at the gym ⚡',d:'Pulse'},{t:'just getting home 🎉',d:'Social'},
+      {t:'first in the library 🎯',d:'Focus'},{t:'making pancakes 🏠',d:'Nest'}] },
+    { t:"your roommate's dream trait:", a:[
+      {t:'spots me',d:'Pulse'},{t:'knows everyone',d:'Social'},
+      {t:'respects headphones',d:'Focus'},{t:'waters the plants',d:'Nest'}] },
+    { t:'friday night, honestly:', a:[
+      {t:'leg day',d:'Pulse'},{t:"EVERYONE'S invited",d:'Social'},
+      {t:'lock in',d:'Focus'},{t:'blanket burrito',d:'Nest'}] }
+  ];
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var card = document.querySelector('[data-quiz-card]');
+  var title = document.querySelector('[data-quiz-title]');
+  var answers = document.querySelector('[data-quiz-answers]');
+  var dots = document.querySelectorAll('.quiz-dots span');
+  var result = document.querySelector('[data-quiz-result]');
+  var glow = document.querySelector('[data-quiz-glow]');
+  var crestBox = document.querySelector('[data-quiz-crest]');
+  var link = document.querySelector('[data-quiz-link]');
+  var needle = document.querySelector('.gauge__needle');
+  var gaugeImg = {
+    Pulse: document.querySelector('.gauge__pulse'), Social: document.querySelector('.gauge__social'),
+    Focus: document.querySelector('.gauge__focus'), Nest: document.querySelector('.gauge__nest')
+  };
+  var idx = 0, scores = { Pulse:0, Social:0, Focus:0, Nest:0 }, flying = false;
+
+  function render() {
+    // gauge
+    var total = 0, k; for (k in scores) total += scores[k];
+    var ang = 0;
+    if (total) { var sum = 0; for (k in scores) sum += scores[k]*ANGLES[k]; ang = Math.round(sum/total); }
+    needle.style.transform = 'rotate(' + ang + 'deg)';
+    var best = -1, winner = 'Pulse'; for (k in scores) if (scores[k] > best) { best = scores[k]; winner = k; }
+    var leaders = []; if (total) for (k in scores) if (scores[k] === best) leaders.push(k);
+    for (k in gaugeImg) gaugeImg[k].classList.toggle('is-leader', leaders.indexOf(k) !== -1);
+
+    if (idx < 3) {
+      var q = QUESTIONS[idx];
+      title.textContent = q.t;
+      answers.innerHTML = '';
+      q.a.forEach(function (x) {
+        var b = document.createElement('button');
+        b.textContent = x.t;
+        b.addEventListener('click', function () { pick(x.d); });
+        answers.appendChild(b);
+      });
+      dots.forEach(function (d, i) { d.classList.toggle('on', i <= idx); });
+    } else {
+      card.hidden = true; result.hidden = false;
+      glow.style.background = 'radial-gradient(circle at 50% 40%,' + DORMS[winner] + ' 0%,rgba(20,17,24,0) 70%)';
+      crestBox.style.color = DORMS[winner];
+      crestBox.setAttribute('aria-label', winner);
+      link.href = winner.toLowerCase() + '.html';
+    }
+  }
+  function pick(dorm) {
+    if (flying) return;
+    scores[dorm]++;
+    if (reduced) { idx++; render(); return; }
+    flying = true; card.classList.add('is-flying');
+    setTimeout(function () { idx++; flying = false; card.classList.remove('is-flying'); render(); }, 380);
+  }
+  document.querySelector('[data-quiz-restart]').addEventListener('click', function () {
+    idx = 0; scores = { Pulse:0, Social:0, Focus:0, Nest:0 }; flying = false;
+    result.hidden = true; card.hidden = false; card.classList.remove('is-flying'); render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUAD — talk to us</title>
+<meta name="description" content="Questions, tours, existential vibe crises — we answer all three.">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body data-page="contact" data-theme="dark">
+
+<main class="contact">
+  <div class="contact__intro">
+    <h1 class="contact__h1">talk to us</h1>
+    <p class="contact__lede">questions, tours, existential vibe crises — we answer all three.</p>
+    <form data-cform style="display:flex;flex-direction:column;gap:18px;margin-top:10px;">
+      <label class="book-field" style="max-width:none">your name
+        <input class="book-input" type="text" required autocomplete="off"></label>
+      <label class="book-field" style="max-width:none">your email
+        <input class="book-input" type="email" required autocomplete="off"></label>
+      <label class="book-field" style="max-width:none">which dorm are we talking about?
+        <select class="book-input" style="appearance:none">
+          <option>Pulse</option><option>Social</option><option>Focus</option><option>Nest</option>
+        </select></label>
+      <label class="book-field" style="max-width:none">say the thing
+        <textarea class="book-input" required rows="4" style="resize:vertical"></textarea></label>
+      <button class="btn btn--solid" type="submit" style="align-self:flex-start;margin-top:6px;padding:16px 36px;font-size:17px">send it</button>
+      <p class="contact__note" data-cdemo hidden>this is a demo — no rooms were harmed and no data left this page. but honestly? you'd love it here.</p>
+    </form>
+    <p style="margin:18px 0 0;font-family:var(--font-mono);font-size:14px;letter-spacing:.04em;color:var(--muted)">hello@quadliving.example · +00 123 456 789 · Quad Square 4, Northaven</p>
+  </div>
+  <img src="assets/images/contact-hero.png" alt="The QUAD front desk, someone already waving at you"
+    style="flex:0 1 420px;width:min(420px,90vw);height:520px;object-fit:cover;border:4px solid var(--paper);border-radius:16px;transform:rotate(2deg);transition:transform .35s"
+    onmouseover="this.style.transform='rotate(0deg) scale(1.02)'" onmouseout="this.style.transform='rotate(2deg)'">
+</main>
+
+<section class="book-cta" style="padding:90px 40px 130px">
+  <h2 style="font-size:clamp(44px,4.6vw,64px)">found your vibe?</h2>
+  <a href="book.html" class="btn btn--solid">book my spot</a>
+</section>
+
+<script src="quad-nav.js?v=6"></script>
+<script src="quad.js?v=6"></script>
+<script>
+/* Contact — demo form, no network; submit just reveals the disclaimer. */
+document.querySelector('[data-cform]').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.querySelector('[data-cdemo]').hidden = false;
+});
+</script>
+</body>
+</html>

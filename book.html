@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUAD — book your spot</title>
+<meta name="description" content="Pick your vibe, room, and dates. Demo booking — no data leaves the page.">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body data-page="book" data-theme="dark" style="overflow-x:hidden">
+
+<img class="book-bg" src="assets/images/booking-bg.png" alt="" aria-hidden="true">
+<div class="book-scrim" aria-hidden="true"></div>
+
+<main class="book-main">
+  <h1 class="book-h1">let's get you <span class="book-accent" data-baccent>home</span></h1>
+  <div class="book-progress"><div class="book-progress__bar" data-bprog></div></div>
+
+  <div class="book-cols">
+    <div class="book-card">
+      <div class="book-step active" data-step="0">
+        <h2>pick your vibe</h2>
+        <div class="book-choices" role="group" aria-label="pick your vibe">
+          <button class="book-choice" data-bdorm="pulse"><img src="assets/crests/crest-pulse-compact.svg?v=4" alt="">Pulse</button>
+          <button class="book-choice" data-bdorm="social"><img src="assets/crests/crest-social-compact.svg?v=4" alt="">Social</button>
+          <button class="book-choice" data-bdorm="focus"><img src="assets/crests/crest-focus-compact.svg?v=4" alt="">Focus</button>
+          <button class="book-choice" data-bdorm="nest"><img src="assets/crests/crest-nest-compact.svg?v=4" alt="">Nest</button>
+        </div>
+        <button class="book-next" data-bnext disabled>next</button>
+      </div>
+
+      <div class="book-step" data-step="1">
+        <h2>pick your room</h2>
+        <div class="book-choices book-choices--room" role="group" aria-label="pick your room">
+          <button class="book-choice book-choice--room" data-broom="Single"><span class="rname">Single</span><span class="rprice">€540/mo</span></button>
+          <button class="book-choice book-choice--room" data-broom="Double"><span class="rname">Double</span><span class="rprice">€420/mo per person</span></button>
+          <button class="book-choice book-choice--room" data-broom="Twin"><span class="rname">Twin</span><span class="rprice">€760/mo per room</span></button>
+        </div>
+        <img class="book-roomimg" data-broomimg src="assets/images/room-single-pulse.png" alt="the room you picked, styled your way">
+        <div class="book-row">
+          <button class="book-back" data-bback aria-label="back">←</button>
+          <button class="book-next" data-bnext disabled>next</button>
+        </div>
+      </div>
+
+      <div class="book-step" data-step="2">
+        <h2>pick your dates</h2>
+        <div class="book-dates">
+          <label class="book-field">from<input class="book-input" data-bfrom type="date"></label>
+          <label class="book-field">to<input class="book-input" data-bto type="date"></label>
+        </div>
+        <div class="book-row">
+          <button class="book-back" data-bback aria-label="back">←</button>
+          <button class="book-next" data-bnext disabled>almost there</button>
+        </div>
+      </div>
+
+      <div class="book-step" data-step="3">
+        <h2>who are you?</h2>
+        <label class="book-field">your name<input class="book-input" data-bname type="text" autocomplete="off"></label>
+        <label class="book-field">your email<input class="book-input" data-bemail type="email" autocomplete="off"></label>
+        <div class="book-row">
+          <button class="book-back" data-bback aria-label="back">←</button>
+          <button class="book-next" data-bnext disabled>book it</button>
+        </div>
+      </div>
+
+      <div class="book-done" data-step="4">
+        <img src="assets/images/booking-success-meme.png" alt="the celebratory booking-success meme">
+        <h2>booked! <span data-bdone style="color:#FFD600">(not really)</span></h2>
+        <p>this is a demo — no rooms were harmed and no data left this page. but honestly? you'd love it here.</p>
+        <button class="book-next" data-brestart style="opacity:1;align-self:center">run it back</button>
+      </div>
+    </div>
+
+    <aside class="book-summary" aria-label="booking summary">
+      <p class="book-summary__k">your booking</p>
+      <div class="book-summary__pick">
+        <div class="sum-empty" data-sum-empty>
+          <img src="assets/crests/crest-pulse-mono.svg?v=4" alt=""><img src="assets/crests/crest-social-mono.svg?v=4" alt="">
+          <img src="assets/crests/crest-focus-mono.svg?v=4" alt=""><img src="assets/crests/crest-nest-mono.svg?v=4" alt="">
+        </div>
+        <div class="sum-picked" data-sum-picked>
+          <img data-sum-crest src="assets/crests/crest-pulse-compact.svg?v=4" alt=""><span data-sum-dorm>—</span>
+        </div>
+      </div>
+      <div class="book-summary__hr"></div>
+      <div class="book-summary__row"><span class="book-summary__k">vibe</span><p class="book-summary__v" data-sum-vibe>—</p></div>
+      <div class="book-summary__row"><span class="book-summary__k">room</span><p class="book-summary__v" data-sum-room>—</p></div>
+      <div class="book-summary__row"><span class="book-summary__k">dates</span><p class="book-summary__v" data-sum-dates>—</p></div>
+      <div class="book-summary__row"><span class="book-summary__k">who are you?</span><p class="book-summary__v" data-sum-name>—</p></div>
+    </aside>
+  </div>
+</main>
+
+<script src="quad-nav.js?v=6"></script>
+<script src="quad.js?v=6"></script>
+<script>
+/* Booking — 4-step demo flow, per-step validation, live summary. No network. */
+(function () {
+  var DORMS = { pulse:{lead:'#FF3D00',name:'Pulse'}, social:{lead:'#FF2E88',name:'Social'}, focus:{lead:'#3D5AFE',name:'Focus'}, nest:{lead:'#E2725B',name:'Nest'} };
+  var ROOMS = { Single:{price:'€540/mo'}, Double:{price:'€420/mo per person'}, Twin:{price:'€760/mo per room'} };
+  var s = { step:0, dorm:null, room:null, from:'', to:'', name:'', email:'' };
+  var $ = function (sel) { return document.querySelector(sel); };
+  var $$ = function (sel) { return document.querySelectorAll(sel); };
+
+  function canNext() {
+    if (s.step === 0) return !!s.dorm;
+    if (s.step === 1) return !!s.room;
+    if (s.step === 2) return !!(s.from && s.to);
+    if (s.step === 3) return s.name.trim().length > 0 && s.email.indexOf('@') !== -1;
+    return false;
+  }
+  function apply() {
+    var d = s.dorm ? DORMS[s.dorm] : null;
+    $$('[data-step]').forEach(function (el) { el.classList.toggle('active', +el.dataset.step === s.step); });
+    var prog = $('[data-bprog]');
+    prog.style.width = (s.step === 0 ? 2 : s.step * 25) + '%';
+    prog.style.background = d ? d.lead : '#8A8494';
+    var acc = $('[data-baccent]');
+    if (d) { acc.style.color = d.lead; acc.style.backgroundImage = 'linear-gradient(90deg,' + d.lead + ',' + d.lead + ')'; }
+    else { acc.style.color = ''; acc.style.backgroundImage = ''; }
+    $$('[data-bdorm]').forEach(function (el) {
+      var on = el.dataset.bdorm === s.dorm;
+      el.classList.toggle('sel', on);
+      el.style.boxShadow = on ? 'inset 0 0 0 2.5px ' + DORMS[el.dataset.bdorm].lead : '';
+      el.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    $$('[data-broom]').forEach(function (el) {
+      var on = el.dataset.broom === s.room;
+      el.classList.toggle('sel', on);
+      el.style.boxShadow = on ? 'inset 0 0 0 2.5px ' + (d ? d.lead : '#FAF7F2') : '';
+      el.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    var rimg = $('[data-broomimg]');
+    if (s.room && s.dorm) { rimg.src = 'assets/images/room-' + s.room.toLowerCase() + '-' + s.dorm + '.png'; rimg.classList.add('show'); }
+    else rimg.classList.remove('show');
+    var curNext = $('[data-step="' + s.step + '"] [data-bnext]');
+    if (curNext) curNext.disabled = !canNext();
+    var done = $('[data-bdone]');
+    if (d) done.style.color = d.lead === '#3D5AFE' ? '#00E5C7' : d.lead;
+    $('[data-sum-empty]').style.display = s.dorm ? 'none' : 'flex';
+    $('[data-sum-picked]').style.display = s.dorm ? 'flex' : 'none';
+    if (s.dorm) $('[data-sum-crest]').src = 'assets/crests/crest-' + s.dorm + '-compact.svg?v=4';
+    function set(sel, txt) { var el = $(sel); el.textContent = txt || '—'; el.style.color = txt ? '#FAF7F2' : 'rgba(250,247,242,.55)'; }
+    set('[data-sum-dorm]', d ? d.name : '');
+    set('[data-sum-vibe]', d ? d.name : '');
+    set('[data-sum-room]', s.room ? s.room + ' · ' + ROOMS[s.room].price : '');
+    set('[data-sum-dates]', s.from && s.to ? s.from + ' → ' + s.to : '');
+    set('[data-sum-name]', s.name.trim());
+  }
+
+  $$('[data-bdorm]').forEach(function (el) { el.addEventListener('click', function () { s.dorm = el.dataset.bdorm; apply(); }); });
+  $$('[data-broom]').forEach(function (el) { el.addEventListener('click', function () { s.room = el.dataset.broom; apply(); }); });
+  $$('[data-bnext]').forEach(function (el) { el.addEventListener('click', function () { if (canNext()) { s.step++; apply(); } }); });
+  $$('[data-bback]').forEach(function (el) { el.addEventListener('click', function () { if (s.step > 0) { s.step--; apply(); } }); });
+  $('[data-brestart]').addEventListener('click', function () {
+    s = { step:0, dorm:null, room:null, from:'', to:'', name:'', email:'' };
+    ['bfrom','bto','bname','bemail'].forEach(function (k) { var el = $('[data-' + k + ']'); if (el) el.value = ''; });
+    apply();
+  });
+  $('[data-bfrom]').addEventListener('input', function (e) { s.from = e.target.value; apply(); });
+  $('[data-bto]').addEventListener('input', function (e) { s.to = e.target.value; apply(); });
+  $('[data-bname]').addEventListener('input', function (e) { s.name = e.target.value; apply(); });
+  $('[data-bemail]').addEventListener('input', function (e) { s.email = e.target.value; apply(); });
+  apply();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUAD — vibe check</title>
+<meta name="description" content="Eight questions. Brutally accurate. Which QUAD are you?">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body data-page="vibe" data-theme="dark">
+
+<section class="vibe">
+  <div class="vibe__intro">
+    <p class="eyebrow">vibe check</p>
+    <h1 class="vibe__h1">which QUAD <em>are you?</em></h1>
+    <p class="vibe__lede">eight questions. brutally accurate. no take-backs (okay, one take-back).</p>
+    <div class="vibe__fills" aria-hidden="true">
+      <div class="fillcrest"><img class="base" src="assets/crests/crest-pulse-mono.svg?v=4" alt=""><img class="fill" data-fill="pulse" src="assets/crests/crest-pulse-mono.svg?v=4" alt=""></div>
+      <div class="fillcrest"><img class="base" src="assets/crests/crest-social-mono.svg?v=4" alt=""><img class="fill" data-fill="social" src="assets/crests/crest-social-mono.svg?v=4" alt=""></div>
+      <div class="fillcrest"><img class="base" src="assets/crests/crest-focus-mono.svg?v=4" alt=""><img class="fill" data-fill="focus" src="assets/crests/crest-focus-mono.svg?v=4" alt=""></div>
+      <div class="fillcrest"><img class="base" src="assets/crests/crest-nest-mono.svg?v=4" alt=""><img class="fill" data-fill="nest" src="assets/crests/crest-nest-mono.svg?v=4" alt=""></div>
+    </div>
+    <button class="vibe__tb" data-tb type="button">one take-back</button>
+  </div>
+  <div class="vibe__panel">
+    <div data-quiz-slot></div>
+    <div class="quiz-result" data-result hidden>
+      <div class="quiz-result__glow" data-rglow aria-hidden="true"></div>
+      <div class="quiz-result__card">
+        <p class="eyebrow">it's official.</p>
+        <span class="shield" data-rcrest role="img" aria-label="matched dorm" style="width:100px;height:109px;"></span>
+        <h3>you're a <span data-rname style="color:var(--pulse)">Pulse</span> person.</h3>
+        <div class="quiz-result__actions">
+          <a class="quiz-result__cta" data-rlink href="pulse.html">see your dorm</a>
+          <button class="quiz-result__cta quiz-result__cta--ghost" data-runner type="button">see runner-up</button>
+        </div>
+        <button class="quiz-result__restart" data-restart aria-label="start over">↺</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path data-motion d="M0 64 H180 V36 H420 V92 H700 V48 H980 V88 H1220 V56 H1440" fill="none" stroke="#3D5AFE" stroke-width="2.5"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-focus-mono.svg?v=4" alt="">
+</div>
+
+<section class="dorm-sec" aria-label="comparison" style="padding:90px 64px 120px;">
+  <h2>for the spreadsheet people</h2>
+  <div class="cmp-wrap">
+    <div class="cmp" role="table" aria-label="dorm comparison">
+      <div class="cmp__corner" role="columnheader"></div>
+      <div class="cmp__head" role="columnheader"><img src="assets/crests/crest-pulse-compact.svg?v=4" alt=""><span style="color:var(--pulse)">Pulse</span></div>
+      <div class="cmp__head" role="columnheader"><img src="assets/crests/crest-social-compact.svg?v=4" alt=""><span style="color:var(--social)">Social</span></div>
+      <div class="cmp__head" role="columnheader"><img src="assets/crests/crest-focus-compact.svg?v=4" alt=""><span style="color:var(--focus)">Focus</span></div>
+      <div class="cmp__head" role="columnheader"><img src="assets/crests/crest-nest-compact.svg?v=4" alt=""><span style="color:var(--nest)">Nest</span></div>
+
+      <div class="cmp__rowhead" role="rowheader">vibe</div>
+      <div class="cmp__cell" role="cell">move</div>
+      <div class="cmp__cell" role="cell">connect</div>
+      <div class="cmp__cell" role="cell">lock in</div>
+      <div class="cmp__cell" role="cell">chill</div>
+
+      <div class="cmp__rowhead" role="rowheader">motto</div>
+      <div class="cmp__cell cmp__cell--mono" role="cell">NO REST DAYS</div>
+      <div class="cmp__cell cmp__cell--mono" role="cell">EVERYONE'S INVITED</div>
+      <div class="cmp__cell cmp__cell--mono" role="cell">LOCK IN</div>
+      <div class="cmp__cell cmp__cell--mono" role="cell">STAY SOFT</div>
+
+      <div class="cmp__rowhead" role="rowheader">loudest at</div>
+      <div class="cmp__cell cmp__cell--num" role="cell">6am</div>
+      <div class="cmp__cell cmp__cell--num" role="cell">11pm</div>
+      <div class="cmp__cell" role="cell">never</div>
+      <div class="cmp__cell" role="cell">pancake sunday</div>
+
+      <div class="cmp__rowhead" role="rowheader">quietest at</div>
+      <div class="cmp__cell cmp__cell--num" role="cell">10pm</div>
+      <div class="cmp__cell cmp__cell--num" role="cell">9am</div>
+      <div class="cmp__cell" role="cell">always</div>
+      <div class="cmp__cell cmp__cell--num" role="cell">3am</div>
+
+      <div class="cmp__rowhead" role="rowheader">signature move</div>
+      <div class="cmp__cell" role="cell">stairwell race</div>
+      <div class="cmp__cell" role="cell">karaoke encore</div>
+      <div class="cmp__cell" role="cell">whiteboard breakthrough</div>
+      <div class="cmp__cell" role="cell">blanket burrito</div>
+
+      <div class="cmp__rowhead cmp__rowhead--last" role="rowheader">price from</div>
+      <div class="cmp__cell cmp__cell--price" role="cell">€420</div>
+      <div class="cmp__cell cmp__cell--price" role="cell">€420</div>
+      <div class="cmp__cell cmp__cell--price" role="cell">€420</div>
+      <div class="cmp__cell cmp__cell--price" role="cell">€420</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path data-motion d="M0 60 L120 34 L240 86 L360 34 L480 86 L600 34 L720 86 L840 34 L960 86 L1080 34 L1200 86 L1320 34 L1440 60" fill="none" stroke="#FF3D00" stroke-width="2.5"></path>
+  </svg>
+  <img class="divider__traveler" src="assets/crests/crest-pulse-mono.svg?v=4" alt="">
+</div>
+
+<section class="book-cta">
+  <h2 style="font-size:clamp(48px,5vw,72px)">found your vibe?</h2>
+  <a href="book.html" class="btn btn--solid">book my spot</a>
+</section>
+
+<script src="quad-nav.js?v=6"></script>
+<script src="quad.js?v=6"></script>
+<script>
+/* Vibe Check — 8-question quiz, crest-fill progress, one take-back, winner + runner-up. */
+(function () {
+  var DORMS = {
+    pulse:  { lead: getComputedStyle(document.documentElement).getPropertyValue('--pulse').trim() || '#FF3D00', name: 'Pulse',  page: 'pulse.html' },
+    social: { lead: '#FF2E88', name: 'Social', page: 'social.html' },
+    focus:  { lead: '#3D5AFE', name: 'Focus',  page: 'focus.html' },
+    nest:   { lead: '#E2725B', name: 'Nest',   page: 'nest.html' }
+  };
+  var ORDER = ['pulse', 'social', 'focus', 'nest'];
+  var Q = [
+    { t: "it's 7am. you are...", a: [['already at the gym ⚡','pulse'],['just getting home 🎉','social'],['first in the library 🎯','focus'],['making pancakes 🏠','nest']] },
+    { t: "your roommate's dream trait:", a: [['spots me','pulse'],['knows everyone','social'],['respects headphones','focus'],['waters the plants','nest']] },
+    { t: 'friday night, honestly:', a: [['leg day','pulse'],["EVERYONE'S invited",'social'],['lock in','focus'],['blanket burrito','nest']] },
+    { t: 'your ideal sunday:', a: [['10k, then brunch','pulse'],['hosting brunch for twelve','social'],['flashcards till noon','focus'],['pancakes, nap, repeat','nest']] },
+    { t: 'group project kicks off. you:', a: [['suggest walking meetings','pulse'],['recruit half the floor','social'],['whiteboard everything','focus'],['bring snacks for morale','nest']] },
+    { t: 'your desk right now:', a: [['resistance bands on it','pulse'],['three friends sitting on it','social'],['color-coded and spotless','focus'],['two plants and a candle','nest']] },
+    { t: 'notifications are:', a: [['on, for the run club','pulse'],['47 unread, all invites','social'],['off. obviously.','focus'],['just mom and the group chat','nest']] },
+    { t: 'pick a superpower:', a: [['never sore again','pulse'],["know everyone's name",'social'],['perfect memory','focus'],['instant coziness','nest']] }
+  ];
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slot = document.querySelector('[data-quiz-slot]');
+  var result = document.querySelector('[data-result]');
+  var tb = document.querySelector('[data-tb]');
+  var fills = {}; document.querySelectorAll('[data-fill]').forEach(function (f) { fills[f.dataset.fill] = f; });
+  var ans = [], tbUsed = false, showingRunner = false, flying = false;
+
+  function scores() { var s = { pulse:0, social:0, focus:0, nest:0 }; ans.forEach(function (d) { s[d]++; }); return s; }
+  function winnerRunner() { var s = scores(); var o = ORDER.slice().sort(function (a, b) { return s[b] - s[a]; }); return [o[0], o[1]]; }
+
+  function renderCard() {
+    var n = ans.length;
+    var q = Q[n];
+    var card = document.createElement('div');
+    card.className = 'quiz-card';
+    var html = '<p class="qnum">' + (n + 1) + ' / 8</p><h3>' + q.t + '</h3><div class="quiz-answers"></div>';
+    card.innerHTML = html;
+    var box = card.querySelector('.quiz-answers');
+    q.a.forEach(function (pair) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = pair[0];
+      b.addEventListener('click', function () { answer(pair[1], card); });
+      box.appendChild(b);
+    });
+    slot.innerHTML = ''; slot.appendChild(card);
+  }
+  function answer(d, card) {
+    if (flying || ans.length >= 8) return;
+    ans.push(d); updateFills();
+    if (reduced) { advance(); return; }
+    flying = true; card.classList.add('is-flying');
+    setTimeout(function () { flying = false; advance(); }, 300);
+  }
+  function advance() {
+    updateTakeback();
+    if (ans.length >= 8) { showResult(); }
+    else { renderCard(); }
+  }
+  function updateFills() {
+    var n = ans.length, s = scores();
+    ORDER.forEach(function (k) {
+      var share = n ? s[k] / n : 0;
+      fills[k].style.clipPath = 'inset(' + Math.round(100 - share * 100) + '% 0 0 0)';
+    });
+  }
+  function updateTakeback() {
+    var usable = !tbUsed && ans.length > 0 && ans.length < 8;
+    tb.classList.toggle('usable', usable);
+  }
+  function showResult() {
+    slot.innerHTML = ''; result.hidden = false;
+    fillResult(showingRunner ? winnerRunner()[1] : winnerRunner()[0]);
+  }
+  function fillResult(k) {
+    var d = DORMS[k];
+    var rc = document.querySelector('[data-rcrest]');
+    rc.style.color = d.lead; rc.setAttribute('aria-label', d.name);
+    var name = document.querySelector('[data-rname]'); name.textContent = d.name; name.style.color = d.lead;
+    document.querySelector('[data-rlink]').setAttribute('href', d.page);
+    document.querySelector('[data-rglow]').style.background = 'radial-gradient(circle at 50% 40%,' + d.lead + ' 0%,rgba(20,17,24,0) 70%)';
+  }
+  tb.addEventListener('click', function () {
+    if (tbUsed || !ans.length) return;
+    tbUsed = true; ans.pop(); showingRunner = false;
+    result.hidden = true; updateFills(); updateTakeback(); renderCard();
+  });
+  document.querySelector('[data-runner]').addEventListener('click', function () {
+    showingRunner = !showingRunner; fillResult(showingRunner ? winnerRunner()[1] : winnerRunner()[0]);
+  });
+  document.querySelector('[data-restart]').addEventListener('click', function () {
+    ans = []; tbUsed = false; showingRunner = false; flying = false;
+    result.hidden = true; updateFills(); updateTakeback(); renderCard();
+  });
+  renderCard();
+})();
+</script>
+</body>
+</html>
