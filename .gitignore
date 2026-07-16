@@ -8,3 +8,5 @@ assets/crests/_original/
 # tooling / OS
 .claude/
 .DS_Store
+.vercel
+.env*
