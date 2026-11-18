@@ -22,7 +22,7 @@
     { label: 'Focus',  href: 'focus.html',  color: '#3D5AFE' },
     { label: 'Nest',   href: 'nest.html',   color: '#E2725B' }
   ];
-  var NOTE = 'QUAD Student Living, Northaven. A fictional brand — but the vibes are real.';
+  var NOTE = 'QUAD Student Living, Northaven. A fictional brand — but the vibes are real. Crafted by WEBDEVCAVEMAN.';
 
   function buildNav(page, light) {
     var nav = document.createElement('nav');
